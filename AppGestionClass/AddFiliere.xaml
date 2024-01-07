@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.AddFiliere"
+             xmlns:models="clr-namespace:AppGestionClass.Models"
+             Title="Ajout de filière">
+    <Grid>
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+        <VerticalStackLayout Spacing="20" Padding="10">
+            <Label 
+            Padding="20"
+            FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.FileMedical}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="90"
+            TextColor="#03A300"
+        
+            />
+
+            <Label x:Name="alert" HorizontalOptions="Center"/>
+
+            <Label Text="Nom de filière : "/>
+            <Editor x:Name="filiere_name" Placeholder="Nom de filière" Style="{StaticResource CustomEditorStyle}" />
+            <Button  Text="Ajouter" 
+                Clicked="ajouterFiliere" 
+                BackgroundColor="#03A300"
+                     WidthRequest="150"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

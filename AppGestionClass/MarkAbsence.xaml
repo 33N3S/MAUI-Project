@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.MarkAbsence"
+             xmlns:models="clr-namespace:AppGestionClass.Models"
+
+             Title="Absence">
+    <Grid>
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="10">
+                <Label FontFamily="FaSolid"
+                Text="{x:Static models:FaSolidIcon.SchoolFlag}"
+                Padding="20"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center"
+                 FontSize="90"
+                 TextColor="#03A300"
+                            />          
+
+                <Label HorizontalOptions="Center" x:Name="alert" />
+
+                <FlexLayout JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                    <Picker x:Name="picker_lesson" Title="Cours"  Style="{StaticResource CustomEditorStyle}" WidthRequest="120"/>
+                    <Picker x:Name="picker_Filiere" Title="Filière" Style="{StaticResource CustomEditorStyle}" WidthRequest="120"/>
+                </FlexLayout>
+
+                <CollectionView x:Name="student_list"/>
+
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Button Text="Enregistrer" Clicked="SaveAbsence" WidthRequest="120" BackgroundColor="#03A300" />
+                    <Button Text="Annuler" Clicked="CancelAbsence"  WidthRequest="120" BackgroundColor="#03A300"/>
+                </FlexLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

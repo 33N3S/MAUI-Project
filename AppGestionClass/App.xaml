@@ -1,0 +1,33 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppGestionClass"
+             x:Class="AppGestionClass.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="CustomEditorStyle" TargetType="Editor">
+                <Setter Property="Background" Value="White" />
+                <Setter Property="Opacity" Value="0.8" />
+                <Setter Property="PlaceholderColor" Value="Black" />
+            </Style>
+            <Style x:Key="CustomButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="190" />
+                <Setter Property="BackgroundColor" Value="white" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="Margin" Value="0.4" />
+                <Setter Property="BorderColor" Value="#03A300"/>
+                <Setter Property="Opacity" Value="0.8"/>
+            </Style>
+        </ResourceDictionary>
+       
+            
+       
+    </Application.Resources>
+
+        
+</Application>

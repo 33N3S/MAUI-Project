@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.PageInformation"
+              xmlns:models="clr-namespace:AppGestionClass.Models"
+             Title="InformationsPage">
+
+    <Grid>
+        <Image Source="studenteditback.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="10" Padding="10">
+                <Label FontFamily="FaSolid"
+           Text="{x:Static models:FaSolidIcon.ChartBar}"
+           Padding="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="90"
+            TextColor="#03A300"
+                       />
+
+                <Label x:Name="alert" HorizontalOptions="Center" />
+
+                <Editor x:Name="infor_nameStudent" Placeholder="Cne de l'étudiant" TextChanged="OnNameStudentTextChanged" Style="{StaticResource CustomEditorStyle}"/>
+
+                <FlexLayout  JustifyContent="SpaceAround" HorizontalOptions="Center">
+
+                    <Frame CornerRadius="200" BackgroundColor="red" >
+                        <Label x:Name="absence" Background="Red" TextColor="White"/>
+                    </Frame>
+                    <Frame CornerRadius="200" BackgroundColor="Green">
+                        <Label x:Name="presence" Background="Green" TextColor="White" />
+                    </Frame>
+
+                </FlexLayout>
+                <FlexLayout  JustifyContent="SpaceAround" HorizontalOptions="Center">
+
+                    <Label  Text="Absent" FontAttributes="Bold"  />
+                    <Label  Text="Présent" FontAttributes="Bold" />
+                </FlexLayout>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

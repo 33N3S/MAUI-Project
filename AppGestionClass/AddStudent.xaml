@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.AddStudent"
+              xmlns:models="clr-namespace:AppGestionClass.Models"
+             Title="Ajouter un étudiant">
+    <Grid>
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="10" Padding="10">
+                <Label 
+            FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.UserGraduate}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="#03A300"
+            FontSize="110"
+            />
+                <Label x:Name="alert" HorizontalOptions="Center"/>
+                <Editor x:Name="etudiant_cne" Placeholder="Cne"  TextChanged="OnNameStudentTextChanged" Style="{StaticResource CustomEditorStyle}"/>
+                <Editor x:Name="etudiant_firstname" Placeholder="Prenom" Style="{StaticResource CustomEditorStyle}"/>
+                <Editor x:Name="etudiant_lassstname" Placeholder="Nom" Style="{StaticResource CustomEditorStyle}"/>
+                <Editor x:Name="etudiant_email" Placeholder="Email" Style="{StaticResource CustomEditorStyle}"/>
+                <Editor x:Name="etudiant_phone" Placeholder="Tele" Style="{StaticResource CustomEditorStyle}"/>
+                <Label x:Name="Filière" Text="Filière"  TextColor="Black" FontAttributes="Bold" />
+                <Picker x:Name="picker" Style="{StaticResource CustomEditorStyle}"/>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Button x:Name="add" Text="Ajouter" Clicked="addEtudiant" BackgroundColor="#03A300" />
+                    <Button x:Name="btnclear" Text="Annuler" Clicked="cancel" BackgroundColor="#03A300" />
+                </FlexLayout>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:AppGestionClass.Models"
+             x:Class="AppGestionClass.Home"
+             Title="Accueil">
+    <Grid>
+        
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+        <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+
+            <Label FontFamily="FaSolid"
+                   Margin="7"
+               Text="{x:Static models:FaSolidIcon.HouseChimney}"
+               Padding="20"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center"
+                 FontSize="90"
+                 TextColor="#03A300"
+               />
+
+
+            <FlexLayout  JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Absence"
+                    Style="{StaticResource CustomButtonStyle}"   
+                    Clicked="markAbsence"
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.ClipboardList}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"
+         />
+            </FlexLayout>
+
+            <FlexLayout JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Ajouter Étudiant"
+                    
+                   Style="{StaticResource CustomButtonStyle}"
+                   Clicked="AddStudent" 
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.Database}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"
+         />
+
+            </FlexLayout>
+
+            <FlexLayout  JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Nouveau Cours" 
+                    Style="{StaticResource CustomButtonStyle}"
+                    Clicked="addLesson"
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.TableList}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"
+            />
+
+            </FlexLayout>
+
+            <FlexLayout  JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Nouvelle Filière" 
+                Style="{StaticResource CustomButtonStyle}"
+                Clicked="addFiliere"
+                />
+
+                <Label FontFamily="FaSolid"
+                 Text="{x:Static models:FaSolidIcon.CirclePlus}"
+                 HorizontalOptions="Center"
+                 FontSize="40"
+                 TextColor="#03A300"
+          />
+            </FlexLayout>
+
+            <FlexLayout  JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Recherche"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Clicked="SearchFun"
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.MagnifyingGlass}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"
+         />
+            </FlexLayout>
+
+            <FlexLayout JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Page d'Informations" 
+                    Style="{StaticResource CustomButtonStyle}"
+                    Clicked="GoToPageInformation"
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.ChartBar}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"     
+         />
+
+            </FlexLayout>
+
+            <FlexLayout  JustifyContent="SpaceBetween" HorizontalOptions="Center">
+                <Button Text="Déconnexion" 
+                    Style="{StaticResource CustomButtonStyle}"
+                    Clicked="logout"
+                    />
+
+                <Label FontFamily="FaSolid"
+            Text="{x:Static models:FaSolidIcon.ArrowUpRightFromSquare}"
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#03A300"
+                 
+         />
+            </FlexLayout>
+
+
+
+
+        </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

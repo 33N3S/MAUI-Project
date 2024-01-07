@@ -1,0 +1,58 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.Inscription"
+             xmlns:models="clr-namespace:AppGestionClass.Models"
+             Title="Inscription">
+    <Grid>
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+
+        <ScrollView>
+
+                <VerticalStackLayout 
+          Padding="30,0"
+          Spacing="25"
+          VerticalOptions="Center"
+          >
+                    <Label FontFamily="FaSolid"
+             Text="{x:Static models:FaSolidIcon.UserPlus}"
+             Padding="20"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             FontSize="90"
+             TextColor="#03A300"
+             />
+
+                    <Label x:Name="alert" Text="" HorizontalOptions="Center"/>
+
+                <Editor x:Name="prof_name" VerticalOptions="Center" Placeholder="Nom" Style="{StaticResource CustomEditorStyle}"/>
+                <Entry x:Name="prof_password" VerticalOptions="Center" Placeholder="Mot de passe" IsPassword="True" Style="{StaticResource CustomEditorStyle}"  />
+                <Entry x:Name="prof_passwordConfirm" VerticalOptions="Center" Placeholder="Confirmation du mot de passe" IsPassword="True" Style="{StaticResource CustomEditorStyle}" />
+
+                <HorizontalStackLayout Style="{StaticResource CustomEditorStyle}" >
+                        <CheckBox x:Name="showPassword" CheckedChanged="OnShowPasswordCheckedChanged" />
+                        <Label Text="Afficher le mot de passe" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    </HorizontalStackLayout>
+
+
+                    <FlexLayout JustifyContent="SpaceBetween" HorizontalOptions="Center">
+
+                        <Button
+                      Text="S'inscrire"
+                      SemanticProperties.Hint="Compte le nombre de clics"
+                      HorizontalOptions="Center"
+                      Clicked="SignUp"
+                            BackgroundColor="#03A300"
+                      />
+                        <Button 
+                      Text="Annuler"
+                      SemanticProperties.Hint="Compte le nombre de clics"
+                      HorizontalOptions="Center"
+                      Clicked="Cancel"
+                      BackgroundColor="#03A300"
+                      />
+                    </FlexLayout>
+                </VerticalStackLayout>
+
+            </ScrollView>
+        </Grid>
+</ContentPage>

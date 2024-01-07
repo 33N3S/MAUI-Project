@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGestionClass.Search"
+             xmlns:models="clr-namespace:AppGestionClass.Models"
+             Title="Recherche">
+    <Grid>
+        <Image Source="loginbg.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="10" x:Name="content"  >
+                <Label FontFamily="FaSolid"
+              Text="{x:Static models:FaSolidIcon.MagnifyingGlass}"
+              Padding="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="90"
+            TextColor="#03A300"/>   
+                <Label x:Name="alert" HorizontalOptions="Center" />
+
+                <Editor Placeholder="Cne de l'étudiant" x:Name="search_nameStudent" TextChanged="OnNameStudentTextChanged" Style="{StaticResource CustomEditorStyle}" />
+                <Label x:Name="label1" Text="Sélectionnez une filière" FontAttributes="Bold" />
+                <Picker  x:Name="searsh_filiere" Style="{StaticResource CustomEditorStyle}" />
+                <Label x:Name="label2" Text="Sélectionnez un cours" FontAttributes="Bold"/>
+                <Picker  x:Name="searsh_lesson" Style="{StaticResource CustomEditorStyle}"/>
+
+                <FlexLayout JustifyContent="SpaceBetween" x:Name="action">
+                    <Button Text="Rechercher" Clicked="searshFun" BackgroundColor="#03A300"/>
+                    <Button Text="Annuler" Clicked="searshcancel" BackgroundColor="#03A300"/>
+                </FlexLayout>
+
+                <CollectionView x:Name="student_list"/>
+
+                <FlexLayout JustifyContent="SpaceBetween" x:Name="action2">
+
+                    <Button Text="Enregistrer" Clicked="SaveAbsence" BackgroundColor="#03A300" />
+                    <Button Text="Annuler" Clicked="CancelAbsence" BackgroundColor="#03A300" />
+                </FlexLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+
+</ContentPage>
